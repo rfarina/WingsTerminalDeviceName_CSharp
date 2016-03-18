@@ -156,6 +156,10 @@ namespace WingsLogic
                 {
                     if( !string.IsNullOrWhiteSpace( programName ) )
                         callProgram( programName );
+                    // rrf add close connection and return to signon screen
+                    myDatabase.Close();
+                    continue;
+
                 }
                 catch( Exception e )
                 {
